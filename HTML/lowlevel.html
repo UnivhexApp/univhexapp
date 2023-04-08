@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Univhex</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../CSS/style.css" />
+</head>
+
+<style>
+    table,
+    th,
+    td {
+        border: 1px solid black;
+    }
+</style>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-light" style="position:fixed; width: 100%;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="./index.html">
+                <img src="../Images/icon.png" style="width: 30px; height: 30px" alt="" />Univhex
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./proposal.html">Project Proposal</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./specification.html">Project Specification</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./indexnew.html">High Level Design Report</a>
+                      </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Low Level Design Report</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row" style="height: 95vh">
+            <div class="col-sm-3 "></div>
+            <div class="col-sm-6 order-lg-2">
+                <div class="container">
+
+                    <h1 style="text-align: center; padding-top: 4%; margin-top: 10%; margin-bottom: 3% ">
+                        Univhex
+                    </h1>
+
+                    <div style="text-align: center;"><a href="../Download/Univhex_LowLevelDesign.pdf" download>
+                            Download Low Level Design Report</a></div>
+
+                    <br>
+                    <h2>1. Introduction</h2><br>
+                    <p class="p-font" style="text-indent: 2vw">
+                        &emsp;Univhex points to extend the sum of interaction between understudies on the same campus.
+                        Understudies will be able to enroll on this stage by confirming their college email addresses.
+                        This way, we guarantee that non-students will not be able to enlist to the app. <br><br>
+                        &emsp;The app structure will have a comparable structure to other social media apps in today's world. 
+                        It'll have a profile page for each
+                        person client where the data almost them takes put. A domestic page where clients shared
+                        content, such as posts, will stream. Also, it'll have a Univhex page that has a few of the most-liked
+                        posts will take a put. The reason of this page is to extend the proportion of the post's attraction. To
+                        urge into this page, posts ought to get a few sum of “Hex's”, which can be a button comparative to
+                        comments and likes, but in a hexagon shape. After getting sufficient Hexes that post will naturally
+                        exchange to the most-liked page. On Univhex page, the posts keep their position there for at slightest a
+                        week.<br><br>
+                        &emsp;Sharing a post in Univhex will be able to be done namelessly or with the user's title. Besides,
+                        Univhex
+                        will include a fulfilling framework to keep clients interacting with the app. This fulfilling
+                        component
+                        will be related to earned hexes with posts. At long last, we got to advise that, Univhex will be
+                        a social
+                        interaction stage and it won't contain any instructive purposes.
+                    </p>
+                    <br>
+                    <h3>1.1 Object Design Trade-Offs</h3><br>
+                    <h4>1.1.1 Aesthetics and Functionality</h4><br>
+                    <p class="p-font" style="text-indent: 2vw">
+                        &emsp;For the Univhex project, functionality is more important than aesthetics.
+                        In Univhex, users should use the application with ease. Users should be able to reach any
+                        function
+                        without a problem or delay. For example, a user can post a photo without unnecessary delay and
+                        touches. This may cause some aesthetic design issues but the functionality will be protected.
+                    </p>
+                    <br>
+                    <h4>1.1.2 Cost and Quality</h4><br>
+                    <p class="p-font" style="text-indent: 2vw">
+                        &emsp;For the Univhex project, quality is in the forefront but due to our budget, this has a
+                        limit.
+                        Cost is an important feature for this project because we have a limited budget due to the fact
+                        that
+                        we are students. However, Univhex must be of high queality. That is why we cannot choose or give
+                        priority any of these features.
+                    </p>
+                    <br>
+                    <h4>1.1.3 Usability and Security</h4><br>
+                    <p class="p-font" style="text-indent: 2vw">
+                        &emsp;For the Univhex project, usability and security are both significant features. Although
+                        they are both
+                        important, security is slightly prominent.
+                        Because the application can only reachable for university students, we need to give more
+                        resources
+                        to the security. Because in case of any information leak or something like that, project and
+                        students
+                        would be in danger. When we try to provide security, we could lose time and this would reduce
+                        usability.
+                    </p>
+                    <br>
+                    <h3>1.2 Interface Documentation Guidelines</h3><br>
+
+                    <h3>1.3 Engineering Standarts</h3><br>
+                    <p class="p-font" style="text-indent: 2vw;">
+                        &emsp;Univhex uses the UML principles to describe the class interfaces, diagrams, scenarios, use
+                        cases,
+                        subsystem compositions, and hardware depictions. The UML is a crucial component of the software
+                        development process and creating object-oriented software.
+                    </p><br>
+                    <h3>1.4 Definitions, Acronyms, and Abbreviations</h3><br>
+                    <p class="p-font">
+                        Social Media: Websites and applications that enable users to create and share content or
+                        to participate in social networking.<br><br>
+                        Client: The application interacting with the user.<br><br>
+                        Server: The system communicating with each client and update their page.<br><br>
+                        UI: User Interface.<br><br>
+                        API: Application Programming Interface
+                    </p>
+                    <br>
+                    <h2>2. Packages</h2><br>
+                    <p class="p-font" style="text-indent: 2vw;">
+                        Univhex project has 3 different packages: View, Server and Application packages.
+                    </p>
+                    <br>
+                    <h3>2.1 View</h3><br>
+                    <img src="../Images/view.jpeg" alt="view" width="712" height="333"><br>
+                    <br>
+                    <p class="p-font">
+                        <b>pageNav:</b> PageNav is the main view for this project. With this, we can navigate through
+                        every page.<br><br>
+                        <b>Search:</b> Search page and its information will be held in Search.<br><br>
+                        <b>Profile:</b> Users info will be held in Profile.<br><br>
+                        <b>Pages:</b> This contains 3 different pages: Login page, register page and registerContinue page.<br><br>
+                        <b>Home:</b> Main page of the application.<br>
+                    </p><br>
+                    <h3>2.2 Application</h3><br>
+                    <img src="../Images/application.jpeg" alt="application" width="712" height="333"><br>
+                    <br>
+                    <p class="p-font">
+                        <b>Widgets:</b> This class has every widget that is used in application. These are: buttons, text
+                        fields, page
+                        forms and helpers.<br><br>
+                        <b>Colors:</b> Colors that used on the Univhex application is stored in this class. Also, themes class
+                        is
+                        inherites colors class.<br><br>
+                        <b>Themes:</b> Page design like login page or home page, is included here.<br><br>
+                        <b>Objects:</b> Every needed user information stored in this class.
+                    </p><br>
+                    <h3>2.2 Server</h3><br>
+                    <img src="../Images/server.jpeg" alt="server" width="712" height="333"><br>
+                    <br>
+                    <p class="p-font">
+                        <b>Firebase:</b> Firebase class is where the information will be stored in server.<br><br>
+                        <b>Firebase Options:</b> This class provides us to change the database with our request.<br><br>
+                        <b>Auth:</b> This class contains only authentication information. Authentication operation is done in
+                        this
+                        class instead of Database operations.<br><br>
+                        <b>Database Operations:</b> In this class, database operations like login or post will be done.
+                    </p><br>
+                    <h2>3.Class Interfaces</h2><br>
+                    <h3>3.1 Pages</h3><br>
+                    <h4>3.1.1 Login</h4><br>
+                    <table style="width:100%">
+                        <tr>
+                            <th>class Login</th>
+                        </tr>
+                        <tr>
+                            <td><b>Attributes</b></td>
+                        </tr>
+                        <tr>
+                            <td><b>Methods:</b><br>
+                                build()</td>
+                        </tr>
+                    </table> 
+                    <br> 
+                    <table style="width:100%">  
+                        <tr>
+                            <th>class Register</th>
+                        </tr>
+                        <tr>
+                            <td><b>Attributes:</b><br>
+                                const Register({super.key})</td>
+                        </tr>
+                        <tr>
+                            <td><b>Methods:</b><br>
+                                build()</td>
+                        </tr>
+                    </table>
+                    <br>
+                    <table style="width:100%">    
+                        <tr>
+                            <th>class RegisterContinue</th>
+                        </tr>
+                        <tr>
+                            <td><b>Attributes:</b><br>
+                                Decoration <br>
+                                Child <br>
+                                backgroundColor <br>
+                                appBar <br>
+                                body <br>
+                                Text <br>
+                                _registerFormKey <br>
+                                University, major, yearOfStudy</td>
+                        </tr>
+                        <tr>
+                            <td><b>Methods:</b><br>
+                                _registerFormKey <br>
+                                build()</td>
+                        </tr>
+
+                    </table>
+                    <br>
+                    <h4>3.1.2 Home</h4><br>
+                    <table style="width:100%">
+                        <tr>
+                            <th>class HomeScreen</th>
+                        </tr>
+                        <tr>
+                            <td><b>Attributes: </b><br>
+                                key <br>
+                                HomePage
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><b>Methods</b></td>
+                        </tr>
+                        <tr>
+                    </table>
+                    <br>
+                    <h4>3.1.3 Profile</h4><br>
+                    <table style="width:100%">
+                        <tr>
+                            <th>class ProfileScreen</th>
+                        </tr>
+                        <tr>
+                            <td><b>Attributes: </b><br>
+                                Scaffold<br>
+                                AppBar<br>
+                                SafeArea<br>
+                                Text<br>
+                                IconButton<br>
+                                Center<br>
+                                Column<br>
+                                addVerticalSpace<br>
+                                HexagonWidget<br>
+                                AspectRatio<br>
+                                Row<br>
+                                addHorizontalSpace<br>
+                                SizedBox<br>
+                                Image.asset<br>
+                                DefaultTabController<br>
+                                TabBar<br>
+                                TabBarView
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><b>Methods: </b><br>
+                                build(BuildContext context)<br>
+                                addVerticalSpace(BuildContext context, double space)<br>
+                                addHorizontalSpace(BuildContext context, double space)<br>
+                                addVerticalSpace<br>
+                                profileTabBar()<br>
+                                createState()<br>
+                                _profileTabBarState()<br>
+                                initState()<br>
+                                build(BuildContext context)
+                            </td>
+                        </tr>
+                        <tr>
+                    </table>
+                    <br>
+                    <h4>3.1.4 Search</h4><br>
+                    <table style="width:100%">
+                        <tr>
+                            <th>class SearchScreen</th>
+                        </tr>
+                        <tr>
+                            <td><b>Attributes</b></td>
+                        </tr>
+                        <tr>
+                            <td><b>Methods: </b><br>
+                                build()</td>
+                        </tr>
+                        <tr>
+                    </table>
+                    <br>
+                    <h3>3.2 Objects</h3><br>
+                    <h4>3.2.1 AppUser</h4><br>
+                    <table style="width:100%">
+                        <tr>
+                            <th>class AppUser</th>
+                        </tr>
+                        <tr>
+                            <td><b>Attributes: </b><br>
+                                name<br>
+                                surname<br>
+                                email<br>
+                                password<br>
+                                university<br>
+                                fieldOfStudy<br>
+                                yearsOfStudy<br>
+                                createdAt<br>
+                                imgURL<br>
+                                hexPoints
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><b>Methods: </b><br>
+                                AppUser()<br>
+                                toString()<br>
+                                factory AppUser.fromFirestore()<br>
+                                Map String, dynamic toFireStore()
+                            </td>
+                        </tr>
+                        <tr>
+                    </table>
+                    <br>
+                    <h3>3.3 Server</h3><br>
+                    <h4>3.3.1 Firebase</h4><br>
+                    <table style="width:100%">
+                        <tr>
+                            <th>class auth</th>
+                        </tr>
+                        <tr>
+                            <td><b>Attributes</b></td>
+                        </tr>
+                        <tr>
+                            <td><b>Methods: </b><br>
+                                Future Register_User(AppUser user)<br>
+                                Future Auth_User(String email, String password)
+
+                            </td>
+                        </tr>
+                        <tr>
+                    </table><br>
+                    <table style="width:100%">
+                        <tr>
+                            <th>class database_operations</th>
+                        </tr>
+                        <tr>
+                            <td><b>Attributes</b></td>
+                        </tr>
+                        <tr>
+                            <td><b>Methods: </b><br>
+                                registerAppUserDB(AppUser user)<br>
+                                readUserfromDB(String email)
+
+                            </td>
+                        </tr>
+                        <tr>
+                    </table>
+                    <br>
+                    <h2>4. Glossary</h2><br>
+                    <p class="p-font">
+                        <b>Flutter:</b> A mobile app development framework that allows for the creation of high-
+                        performance, cross-platform applications.<br><br>
+                        <b>Firebase:</b> A mobile and web application development platform that provides a set of tools
+                        and services for building and managing applications, including authentication, database
+                        management, and storage.<br><br>
+                        <b>Cloud Firestore:</b> A flexible, scalable NoSQL document database provided by
+                        Firebase.<br><br>
+                        <b>AppUser:</b> A class that represents a user of the social media app, including attributes such
+                        as
+                        name, email, password, university, and field of study.<br><br>
+                        <b>Post:</b> A class that represents a user's post on the social media app, including attributes
+                        such as the post content, the date it was created, and the user who created it.<br><br>
+                        <b>Comment:</b> A class that represents a user's comment on a post, including attributes such as
+                        the comment content, the date it was created, and the user who created it.<br><br>
+                        <b>Like:</b> A class that represents a user's like on a post, including attributes such as the
+                        date it was created and the user who created it.<br><br>
+                        <b>Follow:</b> A class that represents a user's follow relationship with another user, including
+                        attributes such as the date the relationship was created and the users involved.<br><br>
+                        <b>Database Operations:</b> A set of functions and methods for interacting with the Firebase
+                        Cloud Firestore database, including functions for creating, reading, updating, and deleting user data,
+                        posts, comments, likes, and follows.<br><br>
+                        <b>Authentication:</b> The process of verifying a user's identity, typically through a login
+                        system that requires a valid email and password.<br><br>
+                        <b>Navigation:</b> The process of moving between different screens or views within the app,
+                        typically facilitated through a navigation bar or drawer.<br><br>
+                        <b>State Management:</b> The process of managing and updating the state of the app's user
+                        interface, typically through the use of stateful widgets and provider patterns.<br><br>
+                        <b>Widgets:</b> The building blocks of the Flutter UI, including basic widgets such as text,
+                        images, and buttons, as well as more complex widgets such as lists, forms, and animations.<br><br>
+                        <b>API:</b> An application programming interface that allows for the exchange of data between
+                        different software applications, typically through a set of rules and protocols. In the context
+                        of a social media app, an API might be used to connect the app to external services such as
+                        Google Maps or Twitter.
+                    </p><br>
+                    <h2>5. References</h2><br>
+                    <ul>
+                        <li>
+                            <p class="p-font">Flutter documentation:
+                                <a href="https://flutter.dev/docs">https://flutter.dev/docs</a>
+                            </p>
+
+                        </li>
+                        <li>
+                            <p class="p-font">Firebase documentation: 
+                            <a href="https://firebase.google.com/docs">https://firebase.google.com/docs</a>
+                        </p>
+                        </li>
+                        <li>
+                            <p class="p-font">Cloud Firestore documentation: 
+                            <a
+                                href="https://firebase.google.com/docs/firestore">https://firebase.google.com/docs/firestore</a>
+                            </p>
+                        </li>
+                        <li>
+                            <p class="p-font">FlutterFire documentation: 
+                            <a href="https://firebase.flutter.dev/">https://firebase.flutter.dev/</a>
+                        </p>
+                        </li>
+                        <li>
+                            <p class="p-font">"Flutter & Firebase: Build a Complete Social Network App for iOS & Android"
+                                Udemy course by Phil Jay: 
+                            <a href="https://www.udemy.com/course/flutter-firebase-build-a-
+                                complete-social-network-app-for-ios-android/">https://www.udemy.com/course/flutter-firebase-build-a-
+                                complete-social-network-app-for-ios-android/</a>
+                            </p>
+                        </li>
+                        <li>
+                            <p class="p-font">"Flutter Social App UI Kit" by Flutter Templates: 
+                            <a
+                                href="https://flutter-templates.com/flutter-social-app-ui-kit/">https://flutter-templates.com/flutter-social-app-ui-kit/</a>
+                            </p>
+                        </li>
+                        <li>
+                            <p class="p-font">"Flutter Social Media App UI Kit" by Enappd: 
+                            <a
+                                href="https://enappd.com/flutter-social-media-app-ui-kit/overview/6">https://enappd.com/flutter-social-media-app-ui-kit/overview/6</a>
+                            </p>
+                        </li>
+                        <li>
+                            <p class="p-font">"Flutter Instagram Clone" by Mitesh Shah: 
+                            <a
+                                href="https://github.com/mitesh77/flutter_instagram_clone">https://github.com/mitesh77/flutter_instagram_clone</a>
+                            </p>
+                        </li>
+                    </ul>
+                    <br>
+                    <p class="p-font"><b>Group Members:</b> Çağla Köse, Doğa Türkmen, Mert Arcan, Oytun Uras Şahin</p>
+                    <p class="p-font"><b>Project Advisor:</b> Venera Adanova</p>
+                    <p class="p-font"><b>Jury Members:</b> Aslı Gençtav, Elif Kurtaran Özbudak</p>
+                    <br>
+                    <br>
+                </div>
+
+
+            </div>
+</body>
+
+</html>

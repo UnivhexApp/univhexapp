@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Univhex</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../CSS/style.css" />
+</head>
+
+<style>
+    table,
+    th,
+    td {
+        border: 1px solid black;
+    }
+</style>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-light" style="position:fixed; width: 100%;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="./index.html">
+                <img src="../Images/icon.png" style="width: 30px; height: 30px" alt="" />Univhex
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./proposal.html">Project Proposal</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./specification.html">Project Specification</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">High Level Design Report</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./lowlevel.html">Low Level Design Report</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./testplan.html">Test Plan Report</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row" style="height: 95vh">
+            <div class="col-sm-3 "></div>
+            <div class="col-sm-6 order-lg-2">
+                <div class="container">
+
+                    <h1 style="text-align: center; padding-top: 4%; margin-top: 10%; margin-bottom: 3% ">
+                        Univhex
+                    </h1>
+
+                    <div style="text-align: center;"><a href="../Download/Univhex_Test_Plan_Report.pdf" download>
+                            Download Test Plan Report</a></div>
+
+                    <br>
+                    <h2>1. Introduction</h2><br>
+                    <p class="p-font" style="text-indent: 2vw">
+                        &emsp;The purpose of this Test Plan Report is to ensure that our multifunctional social media
+                        platform for university students provides a unique social media experience while maintaining a
+                        safe and user-friendly environment. Our primary goal is to create a social media platform that
+                        allows students to share their ideas, needs, wishes, and other campus life-related subjects with
+                        ease. We aim to provide a platform that university students can use to spend their time with
+                        pleasure. In creating this social media platform, our primary duty is to afford a secure and
+                        user-friendly environment where university students can socialize. The aim of this test plan is
+                        to ensure that the social media platform meets the requirements and provides a seamless
+                        experience for the university students.
+                    </p>
+                    <br>
+                    <h2>2. Testing Approach</h2><br>
+                    <h3>2.1 Test Objectives</h3><br>
+                    <p class="p-font">
+                        • Ensuring that users can register and sign-in properly.<br><br>
+                        • Ensuring the e-mail verification feature working.<br><br>
+                        • Ensuring that users can see and make interaction with posts properly.<br><br>
+                        • Validating the user interface is working without a delay.<br><br>
+                        • Ensuring that the users share posts without a problem.<br><br>
+                        • Verifying the user profile contains all the information.<br><br>
+                        • Validating the app performance on different devices.<br><br>
+                        • Validating the app compatibility on different devices.
+                    </p><br>
+                    <h3>2.2 Test Tools</h3><br>
+                    <p class="p-font">
+                        • Flutter<br><br>
+                        • Web
+                    </p><br>
+                    <h3>2.3 Test Environment</h3><br>
+                    <p class="p-font" style="text-indent: 2vw;">
+                        We will conduct our testing in an environment that includes Android and iOS mobile devices and
+                        popular web browsers such as Google Chrome, Safari, and Mozilla Firefox. By conducting testing
+                        in a diverse environment, we will be able to identify any compatibility issues that may arise
+                        and ensure that our social media platform is accessible to all university students.
+                    </p><br>
+                    <h3>2.4 Test Methods</h3><br>
+                    <p class="p-font" style="text-indent: 2vw;">
+                        We will use both manual testing and automated testing methods to conduct our testing. Manual
+                        testing will involve real users interacting with the social media platform to identify any
+                        issues that may arise during normal usage. Automated testing will involve using testing tools to
+                        identify any functional, usability, security, or performance issues that may not be apparent
+                        during manual testing.
+                    </p><br>
+
+                    <h2>3. Test Scope</h2><br>
+                    <p class="p-font">
+                        Test scope of the Univhex application contains:<br><br>
+                        1. General performance<br><br>
+                        2. Compatibility on different devices<br><br>
+                        3. Performance of user interface<br><br>
+                        4. Delay issues<br><br>
+                        5. Posting/ Post Interactions<br>
+                    </p><br>
+
+                    <h2>4. Test Plan Overview</h2><br>
+                    <h3>4.1. Testing Phases</h3><br>
+                    <p class="p-font">
+
+                        <b>Unit Testing: </b>The App’s individual components will be tested separately to ensure they
+                        work as intended. <br><br>
+                        <b>System and Integration Testing: </b>The app will be tested as a whole to ensure that its
+                        different components work together seamlessly. <br><br>
+                        <b>Compatibility Testing: </b>The app will be tested to ensure it works well across different
+                        devices and platforms. <br><br>
+                        <b>Performance Testing: </b>The app’s performance will be tested under different conditions to
+                        identify the areas that require improvement. <br><br>
+                        <b>Ethical and Security Testing: </b>The app will be tested to ensure it handles user data
+                        ethically and securely. <br><br>
+                        <b>User Acceptance Testing: </b>A selected group of end-users will test the app in real-world
+                        conditions to ensure it meets their needs and expectations. <br><br>
+                        <b>Usability Testing: </b>The app’s usability will be tested to evaluate how easy it is to use
+                        and navigate. <br><br>
+                        <b>Beta Testing: </b>The app will be released to a limited group of users to gather feedback
+                        before full release. <br><br>
+                    </p>
+                    <h3>4.2. Test Schedule and Timeline</h3><br>
+
+                    <p class="p-font">
+
+                        <b>Unit Testing:</b> Week 1<br><br>
+                        <b>System and Integration Testing:</b> Week 2<br><br>
+                        <b>Compatibility Testing:</b> Week 3<br><br>
+                        <b>Performance Testing:</b> Week 3<br><br>
+                        <b>Ethical and Security Testing:</b> Week 4<br><br>
+                        <b>User Acceptance Testing:</b> Week 4<br><br>
+                        <b>Usability Testing:</b> Week 4<br><br>
+                        <b>Beta Testing:</b> Week 5<br>
+
+                    </p><br>
+
+                    <h2>5.Team Roles and Responsibilities</h2><br>
+                    <p class="p-font" style="text-indent: 2vw">
+                        The testing team will be responsible for conducting testing and reporting any issues that arise
+                        during testing. The testing team will also be responsible for maintaining a testing environment
+                        that is consistent and stable. The development team will be responsible for addressing any
+                        issues that are identified during testing and ensuring that the social media platform meets the
+                        requirements.
+                    </p><br>
+                    <h2>6. Resources</h2><br>
+                    <p class="p-font" style="text-indent: 2vw">
+                        Testing is some of the most crucial parts of our project. For resources we will be using for to
+                        test will consist of task manager, test engineers, testing tools, test environments, testing
+                        data and test infrastructure. To be more specific about testing environment, we will be using
+                        mobile device emulators, cloud-based testing platforms, social media testing tools and beta
+                        testing programs to make sure the app is running smoothly.
+                    </p><br>
+                    <h2> 7. Risks and Mitigation</h2><br>
+                    <p class="p-font" style="text-indent: 2vw">
+                        Knowing potential risks are important and to prevent them before getting them is important.
+                        Risks and mitigation could alter but the main problems we can face are user engagement risks,
+                        user privacy and data security risks, technical risks, legal regulatory risks, and financial
+                        risks. These are just the potential risks that we can face and it’s important to mitigate any
+                        risks by knowing beforehand the possibilities.
+                    </p><br>
+                    <h2>8. Conclusion</h2><br>
+                    <p class="p-font" style="text-indent: 2vw">
+                        The test plan is a comprehensive guide for the testing team with an overview of the testing
+                        process. We are confident that our testing approach will ensure that the social media platform
+                        we create meets the needs of university students, is user-friendly, and provides a unique social
+                        media experience.
+                    </p>
+                    <br>
+                    <p class="p-font"><b>Group Members:</b> Çağla Köse, Doğa Türkmen, Mert Arcan, Oytun Uras Şahin</p>
+                    <p class="p-font"><b>Project Advisor:</b> Venera Adanova</p>
+                    <p class="p-font"><b>Jury Members:</b> Aslı Gençtav, Elif Kurtaran Özbudak</p>
+                    <br>
+                    <br>
+                </div>
+
+
+            </div>
+</body>
+
+</html>

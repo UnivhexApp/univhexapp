@@ -2,6 +2,10 @@
   font-family: "Merriweather", serif;
 }
 
+.container{
+  background-color: whitesmoke;
+}
+
 /*
 static const Color myBlack = Color(0xFF212834);
   static const Color myOrange = Color(0xFFFFA500);

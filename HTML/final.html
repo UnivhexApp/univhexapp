@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Univhex</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../CSS/style.css" />
+</head>
+
+<style>
+    table,
+    th,
+    td {
+        border: 1px solid black;
+    }
+</style>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-light" style="position:fixed; width: 100%;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="./index.html">
+                <img src="../Images/icon.png" style="width: 30px; height: 30px" alt="" />Univhex
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./proposal.html">Project Proposal</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./specification.html">Project Specification</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./highLevel.html">High Level Design Report</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./lowlevel.html">Low Level Design Report</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./testplan.html">Test Plan Report</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./final.html">Final Report</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./backlog.html">Backlog</a>
+                      </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row" style="height: 95vh">
+            <div class="col-sm-3 "></div>
+            <div class="col-sm-6 order-lg-2">
+                <div class="container">
+
+                    <h1 style="text-align: center; padding-top: 4%; margin-top: 10%; margin-bottom: 3% ">
+                        <img src="../Images/icon.png" style="width: 55px; height: 55px" alt="" />
+                        Univhex
+                    </h1>
+
+                    <div style="text-align: center;"><a href="../Download/Univhex_Final_Report.pdf" download>
+                            Download Final Report</a></div>
+
+                    <br>
+                    <h2>1. Introduction</h2><br>
+                    <p class="p-font" style="text-indent: 2vw">
+                        &emsp;Univhex aims to increase the amount of interaction between students on the same campus.
+                        Students will be able to register on this platform by verifying their university e-mail
+                        addresses. This way, we ensure that non-students will not be able to register to the app. The
+                        app structure will have a similar structure to other social media apps in today’s world. It will
+                        have a profile page for every individual user where the information about them takes place. A
+                        home page where users shared content, such as posts, will flow. Sharing a post in Univhex will
+                        be able to be done anonymously or with the user’s name. Finally, we need to inform that, Univhex
+                        will be a social interaction platform and it won’t contain any educational purposes.
+                    </p>
+                    <br>
+                    <h2>2. Requirements Analysis</h2><br>
+                    <h3>2.1 Functional Requirements</h3><br>
+                    <p class="p-font">
+                        • Users can sign-up with their university e-mail.<br><br>
+                        • Users can monitor the posts on the main and discover pages.<br><br>
+                        • Users can share posts.<br><br>
+                        • Users can give like to a post.<br><br>
+                        • Users can comment to a post.<br><br>
+                        • Users can navigate through different pages.<br><br>
+                        • Users can see their posts on their profile pages.<br><br>
+                        • Users can report the post.
+                    </p><br>
+                    <h3>2.2 Non-Functional Requirements</h3><br>
+                    <h4>2.2.1 Reliability</h4><br>
+                    <p class="p-font">
+                        • There should no data leak or loss during any transaction between server and client.<br><br>
+                        • Application must not crash randomly, if it crashes then it needs to recover itself from that
+                        error. Also, the application must send a error report to server.
+                    </p><br>
+                    <h4>2.2.2 Usability</h4><br>
+                    <p class="p-font">
+                        • Univhex application must have a user friendly UI that anyone can use te application with ease.
+                    </p>
+                    <h4>2.2.3 Compatibility</h4><br>
+                    <p class="p-font">
+                        • Univhex application will be working on both IOS and Android devices.
+                    </p>
+                    <h4>2.2.4 Security</h4><br>
+                    <p class="p-font">
+                        • Application will protect the user information such as email, password, phone number.
+                    </p>
+                    <h3>2.3 Pseudo Requirements</h3><br>
+                    <h4>2.3.1 Language and Economic Constraints</h4><br>
+                    <p class="p-font">
+                        • Application will support English and Turkish language.<br><br>
+                        • Because we use Github webpage we do not give any money to domain.<br><br>
+                        • Open-source libraries will used for Univhex application.<br><br>
+                        • For database and backend we use Firebase, and because of that we will not use any API’s or any
+                        other services.
+                    </p><br>
+                    <h4>2.3.2 Implementation Constraints</h4><br>
+                    <p class="p-font">
+                        • Univhex application will be operating on mobile devices such as Android and IOS.<br><br>
+                        • Flutter will provide cross-platform for both Android and IOS devices.
+                    </p><br>
+                    <h4>2.3.3 Social, Ethical and Professional Constraints</h4><br>
+                    <p class="p-font">
+                        • Univhex can used by any university students.<br><br>
+                        • Any of the personal information of users will not shared.<br><br>
+                        • We must retain users' usernames and passwords because they must register in order to sell or
+                        bid on the products. We're going to keep the passwords in our database to manage this securely.
+                        Moreover, the private Users' personal information, such as their phone number, name, and last
+                        name, won't be disclosed to other users or other parties without their consent.
+                    </p><br>
+
+                    <h2>3. Design Architecture</h2><br>
+                    <h3>3.1 Overview</h3><br>
+                    <p class="p-font" style="text-indent: 2vw">
+                        We give a general overview of the system architecture and design for our application in this
+                        part. Our software solution's system architecture serves as its basis and offers a disciplined
+                        and well-organized method for achieving the project's goals. We provide a comprehensive grasp of
+                        the structure of the software system and its underlying design concepts by defining the system
+                        boundaries, identifying the architectural style, and specifying the major components.
+                    </p><br>
+
+                    <h3>3.2 Subsystem Decomposition</h3><br>
+                    <p class="p-font" style="text-indent: 2vw">
+                        The architecture of the Univhex project will resemble a client-server approach, although the
+                        server in this case is Firebase services. Because Firebase does not define as a server, the
+                        Univhex project does not have a conventional server. On the other hand, this service performs
+                        all of the functions of a server. The client portion will consist of a mobile application that
+                        lets users sign up and log in, share posts anonymously, give posts hex (our like system),
+                        comment on posts, submit photographs for their profiles, and search other users' profiles.
+                        However, Firebase, our server, handles Univhex's data processing while users share posts or like
+                        those of other users.
+                    </p><br>
+                    <img src="../Images/figure2.jpeg" alt="view" width="712" height="333">
+                    <figcaption>Figure 1. Subsystem Decomposition</figcaption><br>
+                    <br>
+                    <h3>3.3 Hardware/Software Mapping</h3><br>
+                    <p class="p-font" style="text-indent: 2vw">
+                        Database administration for Univhex will be handled using Firebase service and Firestore.
+                        Through the Firebase Database API, a Firebase service, this service exchanges information.
+                        Depending on the activities it takes, the client will generate an HTTP request, and Firebase
+                        will respond appropriately. From any Android or iOS device, the client can access the
+                        application. Both types of devices (IOS and Android) will support all functions. In conclusion,
+                        the client will connect to the server (Firebase) via an HTTP request using the Firebase Database
+                        API.
+                    </p><br>
+                    <img src="../Images/figure1.jpeg" alt="view" width="482" height="1142">
+                    <figcaption>Figure 2. Hardware/Software Mapping</figcaption><br>
+                    <br>
+                    <h3>3.4 Application Logic</h3><br>
+                    <h4>3.4.1 User Manager</h4><br>
+                    <p class="p-font" style="text-indent: 2vw">
+                        User manager service is handling every action of any user such as liking a post, share a post or
+                        commenting to a post. This service communicates with User Manager and Database Manager service
+                        to achieve these tasks.
+                    </p><br>
+                    <h4>3.4.2 Post Manager</h4><br>
+                    <p class="p-font" style="text-indent: 2vw">
+                        This service is responsible for actions on posts. Every action such as liking, or commenting is
+                        handled by this service. This service communicates with User manager to work correctly.
+                    </p><br>
+                    <h4>3.4.3 Database Manager</h4><br>
+                    <p class="p-font" style="text-indent: 2vw">
+                        This service stands as a gate between other services and Firebase Handler. It updates the
+                        Firebase Handler about data transactions.
+                    </p><br>
+                    <h4>3.4.4 Firebase Handler</h4><br>
+                    <p class="p-font" style="text-indent: 2vw">
+                        This service is the most important service for this project. Firebase Handler nearly does
+                        everything that has to be needed on server. It helps to authenticate user and store it. It can
+                        count the likes on the posts or can send to comments to the Firebase storage. This service also
+                        communicates with the client side to provide user actions.
+                    </p><br>
+                    <h3>3.5 Interface</h3><br>
+                    <h4>3.5.1 Mobile Application Client</h4><br>
+                    <p class="p-font" style="text-indent: 2vw">
+                        This client is the main client that is used by users. Users will use the application by
+                        navigating through different pages, sharing their thoughts with posts and make interactions with
+                        other people content. All of these can be done by using the mobile application client.
+                    </p><br>
+                    <h3>3.6 Access Control and Security</h3><br>
+                    <p class="p-font" style="text-indent: 2vw">
+                        Univhex application keeps different information about university students such as their
+                        university email, names and phone numbers. All of these data will be held on database and
+                        protected with secure systems.
+                    </p><br>
+                    <h3>3.7 Boundary Conditions</h3><br>
+                    <p class="p-font" style="text-indent: 2vw">
+                        There are 4 different boundary conditions for the Univhex application. These are Initialization,
+                        Target Audience, Timeframe and Knowledge Limitations.
+                    </p><br>
+                    <h4>3.7.1 Initialization</h4><br>
+                    <p class="p-font" style="text-indent: 2vw">
+                        Every user must have an internet connection for use the Univhex application. Also, users have
+                        the right versions of Univhex to use the application.
+                    </p><br>
+                    <h4>3.7.2 Target Audience</h4><br>
+                    <p class="p-font" style="text-indent: 2vw">
+                        Univhex’s target audience is university students. Any other than university students cannot use
+                        this application. Also, each university has its own Univhex page due to conflicts.
+                    </p><br>
+                    <h4>3.7.3 Timeframe</h4><br>
+                    <p class="p-font" style="text-indent: 2vw">
+                        This project developed in 8 months. Because of our lack of experience to develop a project, we
+                        do not reach the state that we wanted to be. But with time, Univhex project will get updates and
+                        new versions on future.
+                    </p><br>
+                    <h4>3.7.4 Knowledge Limitations</h4><br>
+                    <p class="p-font" style="text-indent: 2vw">
+                        We developed this project with using Flutter. Due to our inexperience on Flutter, we cannot
+                        reach the point that we planned. But we are still learning and with that we can enlarge this
+                        project.
+                    </p><br>
+                    <h3>3.8 Interface Subsystem</h3><br>
+                    <h4>3.8.1 Business 3rd Party Client</h4><br>
+                    <p class="p-font" style="text-indent: 2vw">
+                        We explore the potential for integrating third-party clients into our university social media
+                        application, aiming to enhance functionality and user experience. By establishing strategic
+                        partnerships, we can leverage complementary services, expand our user base, and generate revenue
+                        through advertising and monetization opportunities.
+                    </p><br>
+                    <h4>3.8.2 Mobile Application Client</h4><br>
+                    <p class="p-font" style="text-indent: 2vw">
+                        For our clients we focused on the development and implementation of the mobile application
+                        client for our social media platform. This includes designing an intuitive user interface,
+                        optimizing performance for various mobile devices, and ensuring seamless integration with the
+                        platform's backend infrastructure.
+                    </p><br>
+                    <h2>4. Development/Implementation Details</h2><br>
+                    <p class="p-font" style="text-indent: 2vw">
+                        Our social media application's development and implementation phase included a number of crucial
+                        components to make the project a reality. First, the front-end development process concentrated
+                        on developing a user interface (UI) that is simple to use and offers an enjoyable user
+                        experience. Using flutter helped us creating aesthetically pleasing and responsive UI elements.
+                        The user interface has been thoughtfully designed to allow for simple navigation, accessibility,
+                        and responsiveness on a range of devices and screen sizes.
+                    </p><br>
+                    <p class="p-font" style="text-indent: 2vw">
+                        The backend development phase follows, where the creation of the application's server-side logic
+                        and database administration is the main goal. For user authentication, data storage, and
+                        retrieval, we used the FireStore. Processing user requests, carrying out business logic, and
+                        interacting with the database to store and retrieve user-generated content like posts, comments,
+                        and user profiles were all tasks that belonged to the backend.
+                    </p><br>
+                    <p class="p-font" style="text-indent: 2vw">
+                        Effective data storage and retrieval required careful database management and design. For our
+                        application, we used Firebase. The database schema is created to maintain data integrity, enable
+                        complex queries, and store user-related data efficiently.
+                    </p><br>
+                    <p class="p-font" style="text-indent: 2vw">
+                        We used an iterative and agile approach throughout the development and implementation phase,
+                        running tests frequently, addressing bugs, and taking user feedback into account.
+                    </p><br>
+                    <p class="p-font" style="text-indent: 2vw">
+                        In order to create a solid and useful social media application, the development and
+                        implementation phase included front-end development, back-end logic, database management.
+                    </p><br>
+
+                    <h2>5. Testing</h2><br>
+                    <h3>5.1 Testing Details</h3><br>
+                    <p class="p-font" style="text-indent: 2vw">
+                        During the testing phase, our main focus was to ensure that our social media platform for
+                        university students offers a distinctive and secure user experience. Our objective was to create
+                        a platform where students could effortlessly share their ideas, needs, wishes, and other aspects
+                        of campus life. We aimed to provide an enjoyable space for university students to connect and
+                        engage with one another. As we developed this social media platform, our utmost responsibility
+                        was to establish a safe and user-friendly environment that fostered socialization among
+                        students. The purpose of our test plan was to validate that the platform meets all the
+                        requirements and delivers a seamless experience for university students.
+                    </p><br>
+                    <p class="p-font" style="text-indent: 2vw;">
+                        In our testing process, we employed a combination of manual testing and automated testing
+                        methods. Manual testing involved real users interacting with the social media platform to
+                        uncover any potential issues that may arise during regular usage. This approach allowed us to
+                        observe user behavior, gather feedback, and identify any usability or functional issues that may
+                        have been missed during development.
+                    </p><br>
+                    <p class="p-font" style="text-indent: 2vw;">
+                        Additionally, we utilized automated testing to complement our manual testing efforts. Automated
+                        testing involved using testing tools and frameworks to systematically evaluate the platform's
+                        functionality, usability, security, and performance. By simulating various scenarios and test
+                        cases, we were able to uncover potential issues that may not have been immediately apparent
+                        during manual testing. This approach helped us improve the reliability and robustness of our
+                        social media platform.
+                    </p><br>
+                    <p class="p-font" style="text-indent: 2vw;">
+                        By combining manual and automated testing, we aimed to ensure comprehensive coverage of the
+                        testing process. Manual testing provided valuable insights into user experience
+                        and real-world usage scenarios, while automated testing helped us detect potential issues
+                        efficiently and identify any regressions as we continued to enhance and refine the platform.
+                    </p><br>
+                    <p class="p-font" style="text-indent: 2vw;">
+                        This holistic approach helped us deliver a high-quality social media platform that met the needs
+                        and expectations of university students.
+                    </p><br>
+
+                    <h3>5.2 Test Results</h3> <br>
+                    <p class="p-font">
+                        <b>Test Case 1:</b> Unit Testing<br><br>
+                        The App’s individual components will be tested separately to ensure they work as
+                        intended.<br><br>
+                        <b>Test Outcome:</b> Passed
+                    </p><br>
+                    <p class="p-font">
+                        <b>Test Case 2:</b> System and Integration Testing<br><br>
+                        The app will be tested as a whole to ensure that its different components work together
+                        seamlessly.<br><br>
+                        <b>Test Outcome:</b> Passed
+                    </p><br>
+                    <p class="p-font">
+                        <b>Test Case 3:</b> Compatibility Testing<br><br>
+                        The app will be tested to ensure it works well across different devices and platforms.<br><br>
+                        <b>Test Outcome:</b> Passed
+                    </p><br>
+                    <p class="p-font">
+                        <b>Test Case 4:</b> Performance Testing<br><br>
+                        The app’s performance will be tested under different conditions to identify the areas that
+                        require improvement.<br><br>
+                        <b>Test Outcome:</b> Passed
+                    </p><br>
+                    <p class="p-font">
+                        <b>Test Case 5:</b> Ethical and Security Testing<br><br>
+                        The app will be tested to ensure it handles user data ethically and securely.<br><br>
+                        <b>Test Outcome:</b> Passed
+                    </p><br>
+                    <p class="p-font">
+                        <b>Test Case 6:</b> User Acceptance Testing<br><br>
+                        A selected group of end-users will test the app in real-world conditions to ensure it meets
+                        their needs and expectations.<br><br>
+                        <b>Test Outcome:</b> Users' acceptance and positive feedback will show that the app satisfies
+                        their needs and expectations, which is what we hope for.
+                    </p><br>
+                    <p class="p-font">
+                        <b>Test Case 7:</b> Usability Testing<br><br>
+                        The app’s usability will be tested to evaluate how easy it is to use and navigate.<br><br>
+                        <b>Test Outcome:</b> Passed
+                    </p><br>
+                    <p class="p-font">
+                        <b>Test Case 8:</b> Beta Testing<br><br>
+                        The app will be released to a limited group of users to gather feedback before full
+                        release.<br><br>
+                        <b>Test Outcome:</b> Beta testers will likely provide us with insightful feedback that will help
+                        us address any outstanding problems and further improve the app.
+                    </p><br>
+
+                    <h2>6. Use of library resources and Internet resources</h2><br>
+                    <p class="p-font" style="text-indent: 2vw">
+                        A combination of library resources and online sources were used to compile thorough background
+                        data for the creation of our social media app for college students. Our research was influenced
+                        by the following dependencies, which are crucial to the project:
+                    </p><br>
+                    <p class="p-font">
+                        flutter: sdk: flutter<br><br>
+                        cupertino_icons: ^1.0.2<br><br>
+                        hexagon: ^0.2.0-nullsafety.1<br><br>
+                        auto_route: ^7.3.2<br><br>
+                        get_it: ^7.6.0<br><br>
+                        injectable: ^2.1.2<br><br>
+                        flutter_hooks: ^0.18.6<br><br>
+                        fluentui_system_icons: ^1.1.201<br><br>
+                        flutter_secure_storage: ^8.0.0<br><br>
+                        firebase_core: ^2.13.1<br><br>
+                        firebase_auth: ^4.6.2<br><br>
+                        cloud_firestore: ^4.8.0<br><br>
+                        auto_size_text_field: ^2.2.1<br><br>
+                        image_picker: ^0.8.7+5<br><br>
+                        firebase_storage: ^11.2.2<br><br>
+                        auto_route_generator: ^7.1.1<br><br>
+                        build_runner: ^2.4.4
+                    </p><br>
+                    <h2> 7. Maintenance Plan and Details</h2><br>
+                    <p class="p-font" style="text-indent: 2vw">
+                        Our maintenance plan for the social media application includes regular bug fixing, performance
+                        optimization, security updates, feature enhancements, and platform compatibility. We will
+                        promptly address reported issues, optimize performance metrics, apply security patches,
+                        introduce new features based on user feedback, and ensure compatibility with emerging platforms.
+                        Additionally, we will maintain up-to-date documentation and a knowledge base to provide users
+                        with self-help resources. A dedicated maintenance team will be responsible for executing these
+                        tasks, ensuring a reliable and continuously improved social media experience for university
+                        students.
+                    </p><br>
+                    <h2>8. Impact of Engineering Solutions</h2><br>
+                    <p class="p-font" style="text-indent: 2vw">
+                        <b>Global Impact:</b> The engineering solutions used in the social media app for college students have
+                        the potential to affect users all over the world. The app can foster cross-cultural
+                        understanding, knowledge sharing, and global collaboration among students from various
+                        nations and cultures by fostering connections and facilitating communication. A more inclusive
+                        and connected global community may result from this.
+                    </p>
+                    <br>
+                    <p class="p-font" style="text-indent: 2vw">
+                        <b>Economic Impact:</b> The creation and use of the social media app may have favorable effects on the
+                        economy. It may lead to job openings in user support, software development, and related
+                        industries. The app can also encourage entrepreneurship and innovation by enabling students to
+                        network, share ideas, and collaborate. This could result in economic growth and the launch of
+                        new businesses.
+                    </p>
+                    <br>
+                    <p class="p-font" style="text-indent: 2vw">
+                        <b>Environmental Impact:</b> Even though the environmental effects of social media apps might not be as
+                        noticeable as in other industries, it is crucial to take sustainability into account both during
+                        development and operation. The carbon footprint of the app can be reduced and environmental
+                        sustainability improved by utilizing energy-efficient technologies, streamlining server
+                        infrastructure, and putting eco-friendly practices into practice.
+                    </p>
+                    <br>
+                    <p class="p-font" style="text-indent: 2vw">
+                        <b>Societal Impact:</b> The university student social media app has the potential to significantly
+                        affect society. By encouraging a sense of community and facilitating the sharing of knowledge
+                        and ideas, it can improve social connectivity among students. The app can give students a place
+                        to support one another, share resources, and work together on extracurricular or academic
+                        projects. Additionally, the app can contribute to the development of a welcoming and inclusive
+                        environment for all users by supporting diversity and inclusivity.
+                    </p>
+                    <br>
+                    <h2>9. Contemporary Issues</h2><br>
+                    <p class="p-font" style="text-indent: 2vw">
+                        Social media platforms, especially those used by students, have a big impact on how people live
+                        their lives in today's digital world. For the success and responsible development of the app, it
+                        is essential to comprehend and address the following current issues:
+                    </p>
+                    <br>
+                    <p class="p-font" style="text-indent: 2vw">
+                        <b>Privacy and Data Protection:</b> Users expect social media platforms to give their personal
+                        information top priority and to handle it securely in light of the growing privacy and data
+                        protection concerns. To protect user data from unauthorized access or misuse, the app needs to
+                        have strong privacy controls and clear data policies.
+                    </p>
+                    <br>
+                    <p class="p-font" style="text-indent: 2vw">
+                        <b>Cyberbullying and Online Harassment:</b> Users' mental health is seriously threatened by the
+                        prevalence of cyberbullying and online harassment on social media platforms. Fostering a secure
+                        and welcoming online environment requires the implementation of measures to prevent
+                        and address instances of cyberbullying, such as content moderation tools, reporting systems, and
+                        user education.
+                    </p>
+                    <br>
+                    <p class="p-font" style="text-indent: 2vw">
+                        <b>Fake News and Misinformation:</b> Concerns about the dissemination of false information and its
+                        potential influence on public discourse have been raised by the prevalence of fake news and
+                        misinformation on social media platforms. To stop the spread of false information within the
+                        app, fact-checking mechanisms should be implemented, media literacy should be encouraged, and
+                        tools should be made available for users to report false information.
+                    </p>
+                    <br>
+                    <p class="p-font" style="text-indent: 2vw">
+                        <b>Digital Well-being and Mental Health:</b> Overusing social media sites can have a negative impact on
+                        users' mental health and general wellbeing. The app must be designed with functions that
+                        encourage good digital behavior, such as time management tools, notification settings, and
+                        resources that let users find mental health support when they need it.
+                    </p>
+                    <br>
+                    <p class="p-font" style="text-indent: 2vw">
+                        <b>Mental Health Support and Crisis Intervention:</b> Given the potential effects of social media on
+                        mental health, it is crucial to include tools that support mental health and crisis
+                        intervention. This may entail collaborations with mental health organizations, the provision of
+                        information and support lines, or the incorporation of tools that promote wholesome interactions
+                        and self-care routines.
+                    </p>
+                    <br>
+                    <h2>10. Conclusion and Future Work</h2><br>
+                    <p class="p-font" style="text-indent: 2vw">
+                        In recognizing a void in the lives of university students, we embarked on a mission to bridge
+                        the gap. Our aspiration was to create an application that would empower students to seamlessly
+                        express their thoughts, connect with like-minded individuals, and navigate the challenges posed
+                        by the post-COVID-19 era. With our app, we aimed to restore the ease of meeting new people,
+                        fostering meaningful connections, and cultivating a vibrant community within the university
+                        landscape.
+                    </p>
+                    <br>
+                    <h2>11. Users Manual</h2><br>
+
+                    <img src="../Images/Login.png" alt="login" width="375" height="812"><br><br>
+                    <img src="../Images/Post_detail.png" alt="login" width="375" height="812"><br><br>
+                    <img src="../Images/Profile Page.png" alt="login" width="375" height="812"><br><br>
+                    <img src="../Images/Profile_info.png" alt="login" width="375" height="812"><br><br>
+                    <img src="../Images/Register_Personal.png" alt="login" width="375" height="812"><br><br>
+                    <img src="../Images/Register_university.png" alt="login" width="375" height="812"><br><br>
+                    <img src="../Images/Simulator Screenshot - iPhone X - 2023-06-05 at 21.10.34.png" alt="login" width="375" height="812"><br><br>
+                    <img src="../Images/Home.png" alt="login" width="375" height="812"><br> <br>
+
+                    <h2>12. References</h2><br>
+                    <ul>
+                        <li>
+                            <p class="p-font">[1] Rumeysa Ozaydin. "Final Bidit: An Auction Platform". Retrieved from
+                                <a
+                                    href="https://rumeysaozaydin.github.io/auction/assets/reports/Final_Bidit.pdf">https://rumeysaozaydin.github.io/auction/assets/reports/Final_Bidit.pdf</a>
+                            </p>
+
+                        </li>
+                        <li>
+                            <p class="p-font">[2] TED University. "CMPE492-Syllabus-Spring2023_v2". Retrieved from:
+                                <a
+                                    href="https://lms.tedu.edu.tr/pluginfile.php/162367/mod_resource/content/2/CMPE492-Syllabus-Spring2023_v2.pdf">https://lms.tedu.edu.tr/pluginfile.php/162367/mod_resource/content/2/CMPE492-Syllabus-Spring2023_v2.pdf</a>
+                            </p>
+                        </li>
+                    </ul>
+                    <br>
+                    <p class="p-font"><b>Group Members:</b> Çağla Köse, Doğa Türkmen, Mert Arcan, Oytun Uras Şahin</p>
+                    <p class="p-font"><b>Project Advisor:</b> Venera Adanova</p>
+                    <p class="p-font"><b>Jury Members:</b> Aslı Gençtav, Elif Kurtaran Özbudak</p>
+                    <br>
+                    <br>
+                </div>
+
+
+            </div>
+</body>
+
+</html>
